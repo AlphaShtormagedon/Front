@@ -6,18 +6,16 @@ header
             ul.nav 
                 li.nav--item 
                     a(href="#").nav--link О нас
-                li.nav--item 
-                    a(href="#").nav--link.expand Услуги 
-                        img.arrow(src="img/expand.svg", alt="")
+                li.nav--item.expand 
+                    a(href="#").nav--link Услуги 
                 li.nav--item 
                     a(href="#").nav--link Вакансии
                 li.nav--item 
                     a(href="#").nav--link Новости
-                li.nav--item 
-                    a(href="#").nav--link.expand  Соглашения
-                        img.arrow(src="img/expand.svg", alt="")
-        ul.control 
-            li.control--item 
-                button.control--btn.active Войти
-            li.control--item 
-                button.control--btn Зарегистрироваться
+                li.nav--item.expand 
+                    a(href="#").nav--link  Соглашения
+                .nav.login-status
+                    li.nav--item 
+                        button.nav--btn.active ВОЙТИ
+                    li.nav--item 
+                        button.nav--btn ЗАРЕГИСТРИРОВАТЬСЯ

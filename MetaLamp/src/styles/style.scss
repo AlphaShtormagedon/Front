@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 $main-text: rgba(31, 32, 65, 0.5);
+$btm-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
 html {
     font-size: 10px;
@@ -11,6 +12,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -19,6 +21,7 @@ body {
     margin: 0 auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .nav {
@@ -28,16 +31,90 @@ body {
     padding-left: 0;
     &--item {
         margin: 0 1.5rem;
+        display: flex;
+        align-items: center;
+        &.expand {
+            &::after {
+                content: "";
+                width: 2.4rem;
+                height: 2.1rem;
+                background-image: url(img/expand.svg);
+                background-size: initial;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
     }
     &--link {
         text-decoration: none;
         color: $main-text;
-        &.arrow {
-            display: flex;
-            width: 2.4rem;
-            height: 2.1rem;
-            display: flex;
-            align-items: center;
+    }
+    &--btn {
+        background: $btm-gradient;
+        border: none;
+        border-radius: 10rem;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        padding: 1rem 2rem;
+        &.active {
+            background: #FFFFFF;
+            color: #BC9CFF;
+            position: relative;
+            width: 8.7rem;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3.4rem;
+                background-color: transparent;
+                background-image: url(img/border_login.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
         }
     }
 }
+
+.banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 83rem;
+    max-height: 83rem;
+    &--UI-field {
+        display: flex;
+        width: 116rem;
+        height: 83rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        .form-area {
+            width: 38rem;
+            background-color: #FFFFFF;
+            align-self: flex-start;
+            padding: 4rem 3rem;
+            margin-top: 7rem;
+            margin-left: 0;
+            color: #1F2041;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+            border-radius: .4rem;
+            &h1 {
+                font-weight: 700;
+                font-size: 2.4rem;
+                line-height: 2.9rem; 
+            }
+        }
+    }
+    
+}
+
+
+    
